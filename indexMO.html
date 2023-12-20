@@ -7,15 +7,15 @@
     <link rel="icon" href="icon.PNG" type="image">
 </head>
 <body>
-    <h2>SONY</2>
+    
+    <h2>SONY</h2>
     <img src="1.png">
 
-  <div class="proContainer">
-
+<div class="proContainer">
     <nav>
         <h2>Play Like Never Befor</h2>
-        <iframe width="100%" height="600" src="https://www.youtube.com/embed/1BU4VXofbQk?si=VTFv0Un99HNWOJhB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/1BU4VXofbQk?si=VTFv0Un99HNWOJhB" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </nav>
 
     <div class="product-card">
@@ -25,9 +25,19 @@
             <div class="product-description">EA SPORTS FC™ 24 is a new era for The World’s Game: 
                 19,000+ fully licensed players, 700+ teams, and 30+ leagues playing together in 
                 the most authentic football experience ever created.</div>
-            <div class="product-price">$19.99</div>
-            <button class="buy-button">Buy Now</button>
+            <div class="product-price" id="price" data-price="19.99">$19.99</div>
+            <div class="dropdown">
+                <label for="quantity1" onchange="AddedToCart()">Quantity:</label>
+                <select id="quantity1" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <button class="add-toCart" onclick="addToCart(1, 19.99, 'subTotal1')">Add to cart</button>
+            <div class="message" id="subTotal1"></div>
         </div>
+        
     </div>
     <div class="product-card">
         <img src="sonyP.png" alt="Product Image" class="product-image">
@@ -36,21 +46,25 @@
             <div class="product-description">The PS5® Slim console unleashes new gaming possibilities that you never anticipated.
                 Experience lightning fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback,
                  adaptive triggers, and 3D Audio2.</div>
-            <div class="product-price">$499</div>
-            <button class="buy-button">Buy Now</button>
+                <div class="product-price" data-price="499">$499</div>
+                <div class="dropdown">
+                <label for="quantity2" onchange="AddedToCart()">Quantity:</label>
+                <select id="quantity2" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <button class="add-toCart" onclick="addToCart(2, 499, 'subTotal2')">Add to cart</button>
+            <div class="message" id="subTotal2"></div>
         </div>
     </div>
-    
-   
-    
- </div>
- <div class="proContainer">
-
+</div>
+<div class="proContainer">
     <nav>
         <h2>Home Cinemar</h2>
-        <iframe width="100%" height="600" src="tvV.mp4" title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/ExgxXjjHhm4?si=WbxRvn-B7TIK23sp" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </nav>
 
     <div class="product-card">
@@ -58,44 +72,82 @@
         <div class="product-details">
             <div class="product-title">Sony Bravia</div>
             <div class="product-description">Smart 4K Ultra HD HDR LED TV with Google TV & Assistant | KD65X75WLU</div>
-            <div class="product-price">$19.99</div>
-            <button class="buy-button">Buy Now</button>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="sonyP.png" widtd="4" alt="Product Image" class="product-image">
-        <div class="product-details">
-            <div class="product-title">Sony Bravia</div>
-            <div class="product-description">Smart 4K Ultra HD HDR LED TV with Google TV & Assistant | KD65X75WLU</div>
-            <div class="product-price">$999</div>
-
+            <div class="product-price" data-price="999">$999</div>
             <div class="dropdown">
-                <label for="quantity">Quantity:</label>
-                <select id="quantity" name="quantity">
+                <label for="quantity3">Quantity:</label>
+                <select id="quantity3" name="quantity">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-             
+                    <option value="4">4</option>
                 </select>
             </div>
-
             <div class="dropdown">
                 <label for="size">Size:</label>
                 <select id="size" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="55 inch">55 inch</option>
+                    <option value="65 inch">65 inch</option>
+                    <option value="75 inch">75 inch</option>
+                    <option value="85 inch">85 inch</option>
                 </select>
             </div>
-            <button class="buy-button">Add to Cart</button>
+            <button class="add-toCart" onclick="addToCart(3, 999, 'subTotal3')">Add to cart</button>
+            <div class="message" id="subTotal3"></div>
         </div>
     </div>
-    
-   
-    
- </div>
+</div>
+<div class="proContainer">
+    <nav>
+        <h2>Audio</h2>
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/vuoxprrEwbg?si=AM3qeEQQSKW7AMT9"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </nav>
+    <div class="product-card">
+        <div class="product-details">
+        <div class="product-title">WH-1000XM4 Wireless Noise Cancelling Headphones</div>
+            <div class="product-description">Intelligent and intuitive, the WH-1000XM4 headphones offer further 
+                improvements to our advanced noise cancellation, 
+                exceptional sound quality, and smart listening that adjusts to your behavior and your location.</div>
+            <div class="product-price" data-price="199.99">$199.99</div>
+            <img src="sonyH.png" class="product-image" id="productImage" >
+
+            <div class="color-radio">
+                <label>
+                    <input type="radio" name="color" value="black" onchange="changeProductImage()"> Black
+                </label>
+                <label>
+                    <input type="radio" name="color" value="gray" onchange="changeProductImage()"> Gray
+                </label>
+                <div class="dropdown">
+                    <label for="quantity4">Quantity:</label>
+                    <select id="quantity4" name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button class="add-toCart" onclick="checkColorSelection()" onclick="addToCart(4, 199, 'subTotal4')">Add to cart</button>  
+            <div class="message" id="subTotal4"></div>
+            <div class="message" id="colorMessage"></div>
+            
+        </div>
+       
+    </div>
+    <div class="buyButton">
+        <button class="buy-button" onclick="calculateTotalPrice()">Buy Now</button>
+        <div class="total-price" id="totalPrice"></div>
+    </div></div>
+
+</div>
 
 
 
+
+
+<script src="Mohamad.js"></script>
 </body>
 </html>
+
