@@ -1,0 +1,73 @@
+*{
+    
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing:border-box;
+    
+}
+
+#logodiv{
+    width: 100%;
+    padding-left: 2%;
+    padding-top: 0%;
+    background-color: rgb(0, 0, 0);
+    min-height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color:rgb(215, 210, 210);
+    font-style: italic;
+}
+
+#body1{
+    background-color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+#headerdiv{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    min-height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 10px;
+    
+}
+
+
+
+#body2 {
+
+    display: flex;
+   justify-content: space-between;
+}
+
+#iphone{
+    float: left;
+    width: 50%;
+   
+}
+
+#mac{
+    float: right;
+    width: 50%;
+}
+
+#table{
+    width: 100%;
+    float: right;
+    size: 100cm;
+    border-color: black;
+    
+    font-size: larger;
+}
+
+#button{
+    float:right;
+}
+
+    
+
+
+
